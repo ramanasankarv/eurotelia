@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- define angular app -->
+<html ng-app="spaApp">
+<head>
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap-theme.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style type="text/css">
+    body{width:1210px; margin:0 auto;}
+  </style>
+</head>
+<!-- define angular controller -->
+<body ng-controller="index">
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#/">eurotelia</a>
+      </div>	  
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#/">SERVICES</a></li>
+        <li><a href="#/book/index">PRICES</a></li>
+        <li><a href="#/site/about">APPS</a></li>
+        <li><a href="#/site/contact">HELP</a></li>
+        <li><a href="#/site/contact">SIGN IN</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div id="main" class="container"> 
+    <!-- angular templating -->
+		<!-- this is where content will be injected -->
+    <div ng-view class="animate"></div>
+  </div>
+  
+  <footer class="text-center">
+    <div style="margin:50px;">
+      We're Social! Connect with us on Facebook, Twitter, Google+ and Youtube
+    </div>
+    <div>
+      <img src="assets/images/u74.png">
+    </div>
+    <div>
+      <nav class="navbar navbar-default" style="margin-bottom: 0px;">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#/">eurotelia</a>
+          </div>    
+          
+          <ul class="nav navbar-nav navbar-left" style="margin-top: 10px;">
+            <li><a href="#/">Help</a></li>
+            <li><a href="#/book/index">About</a></li>
+            <li><a href="#/site/about">Jobs</a></li>
+            <li><a href="#/site/contact">Contact</a></li>           
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right" style="margin-top: 10px;">
+            <li><a href="#/">FAQs</a></li>
+            <li><a href="#/book/index">Terms</a></li>
+            <li><a href="#/site/about">Privacy</a></li>
+            <li><a href="#/site/contact">Agent Login</a></li>           
+          </ul>
+
+        </div>
+      </nav>
+    </div>
+    <div style="width:100%;border-top:1px solid #000;padding-top: 4px;">
+      <div style="float:left;">
+        Copyright &copy; eurotelia. All Rights Reserved.
+      </div>
+      <div style="float:right;">
+        <img src="assets/images/u68.png">
+      </div>
+      <span style="clear:both"></span>
+    </div>
+  </footer>
+  
+  <!-- JS -->
+  <script src="assets/angular/angular.min.js"></script>
+  <script src="assets/angular-route/angular-route.min.js"></script>
+  <script src="assets/angular-animate/angular-animate.min.js"></script>
+  
+  <script src="app.js"></script>
+  <script src="controllers/site.js"></script>
+  <script src="models/book.js"></script>
+  <script src="controllers/book.js"></script>
+  
+</body>
+
+</html>
